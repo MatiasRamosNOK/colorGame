@@ -33,7 +33,7 @@ html, body{
 .cuerpo{
     width:100%;
     height: 50px;
-    background-color: coral;
+    background-color: lightblue;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -65,10 +65,16 @@ center{
 }
 
 #facil{
-    background-color: plum;
+  height: 100%;
+  width:70px;
+    background-color: black;
+    color:white;
 }
 #dificil{
-    background-color: plum;
+  height: 100%;
+  width:70px;
+    background-color: black;
+    color:white;
 }
 .wrapper {
   max-width: 500px;
@@ -111,5 +117,27 @@ center{
 .six {
   grid-column: 3;
   grid-row: 2;
+  visibility: hidden;
+}
+
+#reboot{
+  background-color: black;
+  color:white;
+  height:50px;
+  position: absolute;
+  left:0px;
+  margin:0px auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#win{
+ color:white;
+ font-size: 30px;
+ margin:0px auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
   visibility: hidden;
 }
