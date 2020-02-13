@@ -121,10 +121,12 @@ function eventoCorrecto(longitud,posicion,color){
     var wrapper = document.getElementsByClassName("wrapper");
     wrapper[0].children[posicion].addEventListener("click", function (){
         for(var i = 0;i<longitud;i++){
-            if(i!=posicion){
+            {
                 wrapper[0].children[i].style.visibility = "visible"
                 wrapper[0].children[i].style.backgroundColor = color
-                wrapper[0].children[i].removeEventListener("click",ocultar(this));
+                wrapper[0].children[i].removeEventListener("click", function(e){
+                    ocultar(e)
+                });
             }
            
         }
@@ -134,8 +136,10 @@ function eventoCorrecto(longitud,posicion,color){
 function eventoEquivocado(longitud,posicion){
     var wrapper = document.getElementsByClassName("wrapper");
     for(var i = 0;i<longitud;i++){
-        if(i != posicion){
-            wrapper[0].children[i].addEventListener("click", ocultar(this) )
+       {
+            wrapper[0].children[i].addEventListener("click", function (e){
+                ocultar(e);
+            }  )
          }
      }
 }
