@@ -96,7 +96,7 @@ function setearBotones(color,dificultad){
 
         //seteo eventos para todos los botones
         eventoEquivocado(3,posicion);
-        eventoCorrecto(3,posicion,color);
+   //     eventoCorrecto(3,posicion,color);
       //  setearEventos(3,posicion,color,dificultad)
     }
     else{
@@ -110,7 +110,7 @@ function setearBotones(color,dificultad){
 
         //seteo eventos para todos los botones
         eventoEquivocado(6,posicion);
-        eventoCorrecto(6,posicion,color);
+      //  eventoCorrecto(6,posicion,color);
         //setearEventos(6,posicion,color,dificultad)
 
     }
@@ -119,37 +119,20 @@ function setearBotones(color,dificultad){
 
 function eventoCorrecto(longitud,posicion,color){
     var wrapper = document.getElementsByClassName("wrapper");
-    wrapper[0].children[posicion].addEventListener("click", function (){
-        for(var i = 0;i<longitud;i++){
-            {
-                wrapper[0].children[i].style.visibility = "visible"
-                wrapper[0].children[i].style.backgroundColor = color
-                wrapper[0].children[i].removeEventListener("click", function(e){
-                    ocultar(e)
-                });
-            }
-           
-        }
-    } )
+    wrapper[0].children[posicion].addEventListener("click", function () {
+        for(var i =)
+    })
 }
 
 function eventoEquivocado(longitud,posicion){
     var wrapper = document.getElementsByClassName("wrapper");
     for(var i = 0;i<longitud;i++){
-       {
-            wrapper[0].children[i].addEventListener("click", function (e){
-                ocultar(e);
-            }  )
-         }
-     }
+        if(i!=posicion){
+            wrapper[0].children[i].addEventListener("click", function(){ this.style.visibility = "hidden"})
+        }
+    }
 }
 
-function restablecer(obj,color){
 
-}
-
-function ocultar(obj){
-    obj.style.visibility = "hidden"
-}
 
 cargarColorTexto();
