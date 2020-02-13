@@ -1,4 +1,3 @@
-var primeraVez = false;
 
 function reiniciar(){
     window.location.reload(false);
@@ -7,14 +6,14 @@ function reiniciar(){
 function cargarColorTexto(){
     var stringColor = generarColorAleatorio()
 
-    if(!primeraVez){
-        primeraVez = true;
+
         iniciarBotones(stringColor);
-    }
+    
     
 }
 
 var p = document.getElementById("color")
+
 
 function chequearBotones(){
     var wrapper = document.getElementsByClassName("wrapper")
@@ -52,12 +51,16 @@ function colorAleatorio(){
 function iniciarBotones(stringColor){
     var facil = document.getElementById("facil")
     var dificil = document.getElementById("dificil")
+    var newC = document.getElementById("newColor")
+
     facil.addEventListener("click",function (){
         document.getElementById("div1").style.backgroundColor="black"
+        document.getElementById("dificil").addEventListener("click",function(){ reiniciar();})
         mostrarFacil(stringColor);
     })
     dificil.addEventListener("click",function (){
         document.getElementById("div1").style.backgroundColor="black"
+        document.getElementById("facil").addEventListener("click",function(){ reiniciar();})
         mostrarDificil(stringColor);
     })
 }
