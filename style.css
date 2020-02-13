@@ -1,0 +1,115 @@
+
+  * {box-sizing: border-box;}
+
+html, body{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    margin:0;
+  }
+  #div1{
+    height:150px;
+    width: 100%;
+    background-color:rgba(0,0,0,1);
+    justify-content: center;
+    align-items: center;
+    display:table;
+    color:white;
+  }
+  
+  #div2{
+    flex: 1;
+    background-color:rgba(0,0,0,1);
+  }
+.cabeza{
+    width:100%;
+    background-color:antiquewhite;
+}
+#barra{
+    width:100%;
+    height: 50px;
+    background-color: aquamarine;
+}
+.cuerpo{
+    width:100%;
+    height: 50px;
+    background-color: coral;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#color{
+    font-family: sans-serif;
+    font-size: 2.5em;
+    margin: 15px;
+}
+
+.dificultad{
+    display:inline;
+    margin:10px;
+}
+
+.enlinea{
+    margin:5px;
+    display: inline;
+    bottom: 0px;
+}
+
+#texto{
+display: block;
+}
+
+center{
+    display: table-cell;
+    vertical-align: middle; 
+}
+
+#facil{
+    background-color: plum;
+}
+#dificil{
+    background-color: plum;
+}
+.wrapper {
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.wrapper > div {
+  border-radius: 20px;
+  padding: 1em;
+  color: #d9480f;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  grid-auto-rows: minmax(100px,150px);
+}
+.one {
+  grid-column: 1;
+  grid-row: 1;
+}
+.two { 
+  grid-column: 2;
+  grid-row: 1;
+}
+.three {
+  grid-column: 3;
+  grid-row: 1;
+}
+.four {
+  grid-column: 1;
+  grid-row: 2;
+  visibility: hidden;
+}
+.five {
+  grid-column: 2;
+  grid-row: 2;
+  visibility: hidden;
+}
+.six {
+  grid-column: 3;
+  grid-row: 2;
+  visibility: hidden;
+}
