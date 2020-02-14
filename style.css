@@ -19,7 +19,7 @@ html, body{
   
   #div2{
     flex: 1;
-    background-color:rgba(0,0,0,1);
+    background-color:rgba(0,0,0,0.8);
   }
 .cabeza{
     width:100%;
@@ -47,6 +47,7 @@ html, body{
 .dificultad{
     display:inline;
     margin:10px;
+
 }
 
 .enlinea{
